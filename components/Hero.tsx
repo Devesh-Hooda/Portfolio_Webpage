@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({ visitorName }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h1 className="text-5xl sm:text-7xl font-bold text-slate-100 mb-4 tracking-tight">
+          <h1 className="text-4xl sm:text-7xl font-bold text-slate-100 mb-4 tracking-tight">
             Devesh Hooda.
           </h1>
         </motion.div>
@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({ visitorName }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <h2 className="text-4xl sm:text-6xl font-bold text-slate-400 mb-8 tracking-tight">
+          <h2 className="text-3xl sm:text-6xl font-bold text-slate-400 mb-8 tracking-tight">
             I turn data into <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-400 animate-pulse">actionable insights.</span>
           </h2>
         </motion.div>

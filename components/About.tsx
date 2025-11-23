@@ -16,10 +16,10 @@ const About: React.FC<AboutProps> = ({ visitorName }) => {
         transition={{ duration: 0.5 }}
       >
         <div className="flex items-center gap-4 mb-12">
-          <h2 className="text-3xl font-bold text-slate-100 flex items-center whitespace-nowrap">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 flex items-center">
             <span className="text-purple-400 font-mono text-xl mr-2">01.</span> About Me
           </h2>
-          <div className="h-px bg-slate-800/80 w-full max-w-xs"></div>
+          <div className="hidden sm:block h-px bg-slate-800/80 w-full max-w-xs"></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12">

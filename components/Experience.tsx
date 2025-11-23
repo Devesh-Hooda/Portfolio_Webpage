@@ -62,10 +62,10 @@ const Experience: React.FC = () => {
         transition={{ duration: 0.5 }}
       >
         <div className="flex items-center gap-4 mb-12">
-          <h2 className="text-3xl font-bold text-slate-100 flex items-center whitespace-nowrap">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 flex items-center">
             <span className="text-purple-400 font-mono text-xl mr-2">02.</span> Where I've Worked
           </h2>
-          <div className="h-px bg-slate-800/80 w-full max-w-xs"></div>
+          <div className="hidden sm:block h-px bg-slate-800/80 w-full max-w-xs"></div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-8">
