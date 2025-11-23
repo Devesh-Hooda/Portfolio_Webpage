@@ -30,6 +30,13 @@ export const EXPERIENCE_DATA: Experience[] = [
 
 export const PROJECT_DATA: Project[] = [
   {
+    title: "Retail Analytics & Customer Insights",
+    description: "Analyzed 399K+ valid transactions generating £8.64M+ revenue using Python. Performed cohort analysis and RFM-based segmentation, uncovering retention drops across a 12-month lifecycle. Currently building a Tableau dashboard for high-value SKU and customer segment visualization.",
+    techStack: ["Python", "Pandas", "Tableau", "RFM Analysis", "Cohort Analysis"],
+    githubLink: "https://github.com/Devesh-Hooda/UCI_Cohort_Analytics",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
+  },
+  {
     title: "IBM Customer Churn EDA and ML",
     description: "Python-driven analytics pipeline combining EDA, statistical analysis, and machine learning to transform raw customer data into actionable business intelligence. Revealed 28% churn in high-value segments.",
     techStack: ["Python", "LightGBM", "Pandas", "Scikit-learn", "EDA"],
