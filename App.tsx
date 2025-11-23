@@ -80,7 +80,8 @@ const App: React.FC = () => {
         <LevelSystem visitorName={visitorName} />
         <SocialSidebars />
         
-        <main className="flex flex-col items-center w-full px-4 md:px-0 z-10 relative">
+        {/* Removed px-4 here to fix mobile double padding issues */}
+        <main className="flex flex-col items-center w-full z-10 relative">
           <Hero visitorName={visitorName} />
           <About visitorName={visitorName} />
           <Experience />

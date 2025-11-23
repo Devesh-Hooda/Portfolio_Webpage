@@ -62,7 +62,7 @@ const Skills: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#110a1f] p-6 rounded border border-slate-800 hover:border-purple-500/30 transition-colors shadow-[0_0_15px_rgba(0,0,0,0.2)]"
+              className="bg-[#110a1f] p-4 sm:p-6 rounded border border-slate-800 hover:border-purple-500/30 transition-colors shadow-[0_0_15px_rgba(0,0,0,0.2)]"
             >
               <h3 className="text-lg font-bold text-purple-400 mb-4 text-center md:text-left">
                 {category.name}

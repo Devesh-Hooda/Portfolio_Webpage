@@ -12,7 +12,7 @@ const ProjectCard: React.FC<{ project: ProjectType; index: number }> = ({ projec
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="group bg-[#110a1f] rounded p-6 flex flex-col h-full border border-slate-800 hover:border-purple-500/50 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden shadow-lg hover:shadow-purple-500/10"
+      className="group bg-[#110a1f] rounded-lg p-4 sm:p-6 flex flex-col h-full border border-slate-800 hover:border-purple-500/50 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden shadow-lg hover:shadow-purple-500/10"
     >
       {/* Subtle Hover Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
