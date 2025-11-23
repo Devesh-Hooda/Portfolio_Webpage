@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ visitorName }) => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 relative">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-3 sm:px-6 lg:px-8 pt-20 relative">
       <div className="max-w-5xl w-full">
         {/* Personalized Greeting Terminal Line */}
         {visitorName && (

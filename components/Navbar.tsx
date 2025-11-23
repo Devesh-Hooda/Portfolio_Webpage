@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
         scrolled ? 'bg-[#030014]/80 backdrop-blur-md shadow-[0_10px_30px_-10px_rgba(2,12,27,0.7)] py-4' : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 flex justify-between items-center">
         <a href="#" className="text-2xl font-bold text-purple-400 tracking-tighter group relative z-50">
           DH<span className="text-slate-100 group-hover:text-purple-400 transition-colors">.dev</span>
         </a>

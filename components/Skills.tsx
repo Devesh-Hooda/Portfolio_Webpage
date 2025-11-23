@@ -40,7 +40,7 @@ const MagneticPill: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <section id="skills" className="py-24 px-3 sm:px-6 lg:px-8 max-w-4xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

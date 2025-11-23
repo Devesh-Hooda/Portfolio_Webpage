@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 max-w-2xl mx-auto text-center">
+    <section id="contact" className="py-24 px-3 sm:px-6 lg:px-8 max-w-2xl mx-auto text-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

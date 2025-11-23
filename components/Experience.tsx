@@ -54,7 +54,7 @@ const Experience: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <section id="experience" className="py-24 px-3 sm:px-6 lg:px-8 max-w-4xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
