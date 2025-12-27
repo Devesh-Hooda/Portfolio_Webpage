@@ -7,18 +7,11 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   
-  // Scroll Progress Logic
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -33,11 +26,10 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold text-purple-400 tracking-tighter group relative z-50">
-          DH<span className="text-slate-100 group-hover:text-purple-400 transition-colors">.dev</span>
+        <a href="#" className="text-xl font-bold text-purple-400 tracking-[0.2em] group relative z-50 font-mono uppercase">
+          Phase<span className="text-slate-100 group-hover:text-purple-400 transition-colors">.NULL</span>
         </a>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
           {NAV_ITEMS.map((item, index) => (
             <motion.a 
@@ -46,58 +38,22 @@ const Navbar: React.FC = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="text-sm font-medium text-slate-300 hover:text-purple-400 transition-colors"
+              className="text-[10px] font-bold text-slate-400 hover:text-purple-400 transition-colors uppercase tracking-widest font-mono"
             >
-              <span className="text-purple-400/80 mr-1">0{index + 1}.</span>
+              <span className="text-purple-500/40 mr-1.5">P.0{index + 1}</span>
               {item.label}
             </motion.a>
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden z-50">
-          <button 
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-slate-300 hover:text-purple-400 focus:outline-none"
-            aria-label="Toggle menu"
-          >
+          <button onClick={() => setIsOpen(!isOpen)} className="text-slate-300 hover:text-purple-400 focus:outline-none">
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      {isOpen && (
-        <motion.div 
-          initial={{ opacity: 0, x: '100%' }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: '100%' }}
-          className="md:hidden absolute top-0 left-0 w-full h-screen bg-[#030014]/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 z-40"
-        >
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-slate-300 hover:text-purple-400 font-medium text-2xl"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.label}
-            </a>
-          ))}
-          <a 
-            href="/resume.pdf" 
-            className="text-purple-400 border border-purple-500/50 rounded px-8 py-3 font-medium hover:bg-purple-500/20 transition-colors"
-          >
-            Resume
-          </a>
-        </motion.div>
-      )}
-
-      {/* Scroll Progress Bar */}
-      <motion.div
-        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-purple-500 to-fuchsia-500 origin-left"
-        style={{ scaleX }}
-      />
+      <motion.div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-purple-500/50 to-transparent origin-left" style={{ scaleX }} />
     </motion.nav>
   );
 };

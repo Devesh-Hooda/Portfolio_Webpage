@@ -2,16 +2,16 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import { Project, Experience, SkillCategory, SocialLink, NavItem } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Identity', href: '#about' },
+  { label: 'History', href: '#experience' },
+  { label: 'Artifacts', href: '#projects' },
+  { label: 'Resources', href: '#skills' },
+  { label: 'Gateway', href: '#contact' },
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { platform: 'GitHub', url: 'https://github.com/Devesh-Hooda', icon: Github },
   { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/devesh-hooda-b46083260', icon: Linkedin },
+  { platform: 'GitHub', url: 'https://github.com/Devesh-Hooda', icon: Github },
   { platform: 'Email', url: 'mailto:Gvhooda@gmail.com', icon: Mail },
 ];
 
@@ -20,6 +20,7 @@ export const EXPERIENCE_DATA: Experience[] = [
     company: "Skillfied Mentor",
     role: "Data Analyst Intern",
     period: "May 2025",
+    githubLink: "https://github.com/Devesh-Hooda/Data-Analyst-Internship",
     description: [
       "Developed a Python based ML pipeline (Pandas, Scikit-learn) to predict client term deposit subscriptions from demographic and campaign data.",
       "Automated data validation, cleaning (handling NaN/duplicates), and preprocessing (scaling, one-hot encoding) for 40K records.",
@@ -30,46 +31,39 @@ export const EXPERIENCE_DATA: Experience[] = [
 
 export const PROJECT_DATA: Project[] = [
   {
-    title: "Retail Analytics & Customer Insights",
-    description: "Analyzed 399K+ valid transactions generating £8.64M+ revenue using Python. Performed cohort analysis and RFM-based segmentation, uncovering retention drops across a 12-month lifecycle. Currently building a Tableau dashboard for high-value SKU and customer segment visualization.",
-    techStack: ["Python", "Pandas", "Tableau", "RFM Analysis", "Cohort Analysis"],
-    githubLink: "https://github.com/Devesh-Hooda/UCI_Cohort_Analytics",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
+    title: "Bank Term Deposit Predictor",
+    description: "A machine learning pipeline built to predict the success of telemarketing campaigns. It includes comprehensive EDA, feature engineering, and a tuned Random Forest classifier.",
+    techStack: ["Python", "Scikit-Learn", "Pandas", "Matplotlib"],
+    githubLink: "https://github.com/Devesh-Hooda/Data-Analyst-Internship",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    title: "IBM Customer Churn EDA and ML",
-    description: "Python-driven analytics pipeline combining EDA, statistical analysis, and machine learning to transform raw customer data into actionable business intelligence. Revealed 28% churn in high-value segments.",
-    techStack: ["Python", "LightGBM", "Pandas", "Scikit-learn", "EDA"],
+    title: "SQL Sales Insights Dashboard",
+    description: "End-to-end data analysis project using SQL to extract business metrics from raw relational databases and Tableau to visualize sales performance and customer segmentation.",
+    techStack: ["SQL", "Tableau", "SQLite", "Excel"],
     githubLink: "https://github.com/Devesh-Hooda",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000"
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    title: "Automated Recipe Data Pipeline",
-    description: "Engineered a high-performance, multithreaded data scraping and ingestion pipeline, reducing processing time by 40% and enabling extraction of 40K+ recipe records with 99% reliability.",
-    techStack: ["Python", "ThreadPool", "lxml", "Pandas", "Regex"],
+    title: "Predictive Analytics Engine",
+    description: "Automated data cleaning and preprocessing script that handles missing values, outliers, and encoding, preparing datasets for advanced statistical modeling.",
+    techStack: ["Python", "Pandas", "NumPy", "Seaborn"],
     githubLink: "https://github.com/Devesh-Hooda",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000"
-  },
-  {
-    title: "Secure Backend API",
-    description: "Engineered a Node.js/Express backend with JWT authentication and Prisma ORM, eliminating SQL injection risks and implementing Redis rate limiting (100 reqs/min).",
-    techStack: ["Node.js", "Express", "Redis", "Prisma", "MySQL"],
-    githubLink: "https://github.com/Devesh-Hooda",
-    image: "https://images.unsplash.com/photo-1558494949-ef526b004297?auto=format&fit=crop&q=80&w=1000"
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1000&auto=format&fit=crop"
   }
 ];
 
 export const SKILLS_DATA: SkillCategory[] = [
   {
-    name: "Languages & Databases",
-    skills: ["Python", "SQL (MySQL, PostgreSQL)", "VBA", "HTML/CSS", "JavaScript"]
+    name: "Languages & Frameworks",
+    skills: ["Python", "SQL", "HTML5", "CSS3", "JavaScript"]
   },
   {
-    name: "Data Science & ML",
-    skills: ["Pandas", "Matplotlib", "SciKit-learn", "Numpy", "BeautifulSoup4", "Tableau"]
+    name: "Data Science & Analysis",
+    skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-Learn"]
   },
   {
-    name: "Tools & Platforms",
-    skills: ["Docker", "Git", "VSCode", "Google Colab", "Node.js", "Express", "Redis"]
+    name: "Tools & BI Platforms",
+    skills: ["VS Code", "Git / GitHub", "Tableau", "SQLite", "Docker"]
   }
 ];
